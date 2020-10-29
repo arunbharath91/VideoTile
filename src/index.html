@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+  <title>Tab</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="theme-color" content="#2c58ed" />
+  <meta name="description" content="Tab by Arun Bharath" />
+  <meta name="keywords" content= "Tab by arun bharath" />
+  <meta name="author" content="Tab by Arun Bharath">
+  <link rel="shortcut icon" href="../../assets/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <pre>
+  <code>
+   configuration :
+   1) const video = new VideoTile('.videocon') ---videocon is the selectors of video.
+   2) data-title, data-url, data-caption must be supplied for every tile. otherwise it wont work.
+   3) does not support built in lazy loading. but you can refer video-config.ts to see how to achieve that.
+   4) after initialization you need to use video.render() to open modal ---refer video-config.ts
+   5) supports both dynamic and static tiles.
+   </code>
+ </pre>
+
+ <ul class="list-unstyled video-list-thumbs row" id="videoModal">
+</ul>
+
+<button class="btn btn-primary" id="load_more">load more</button>
+
+</body>
+
+</html>
