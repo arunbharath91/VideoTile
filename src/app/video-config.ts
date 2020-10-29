@@ -30,7 +30,7 @@ httpRequest(listParams);
 const renderList = (json:any[]) => {
   let list = '';
   json.forEach((data: any, index) => {
-    list += `<li class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+    list += `<li class="col-lg-2 col-md-2 col-sm-3 col-xs-6 animated fadeIn">
     <a class="videocon" href="${data.url}"
     data-title="${data.title}" 
     data-caption="${data.caption}"

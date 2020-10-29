@@ -26,7 +26,7 @@ export class VideoTile {
   protected eventRegistration(selector: string) {
    const videoListNode  = document.querySelectorAll(selector);
    const videoListArray = (Array.prototype.slice.call(videoListNode));
-
+   this.videoListArrayOptions = [];
    videoListArray.forEach((list, index) => {
     this.videoListArrayOptions.push({
       title: list.getAttribute('data-title'),
@@ -53,11 +53,11 @@ export class VideoTile {
 
     this.video = document.createElement('video');
     this.video.setAttribute('controls', 'true');
+    
     this.video.style.width = '100%';
     this.video.style.height = '400px';
     this.videoSrc = document.createElement('source');
     this.video.append(this.videoSrc);
-
     document.body.insertAdjacentHTML('beforeend','<div class="modal-view-cdk"></div>');
 
     (document.querySelector('.modal-view-cdk') as HTMLElement).addEventListener('click', (e: any) => {
@@ -157,17 +157,22 @@ export class VideoTile {
   }
 
   protected projectViewContainer(listIndex: number) {
+
   (this.modal.querySelector('.modal-title') as HTMLElement).innerHTML = this.videoListArrayOptions[listIndex].title;
   (this.modal.querySelector('.modal-caption') as HTMLElement).innerHTML = this.videoListArrayOptions[listIndex].caption;
   this.modal.setAttribute('source', this.videoListArrayOptions[listIndex].url);
   if(this.isUrl(this.videoListArrayOptions[listIndex].url)) {
     this.video.remove();
+    this.iframe.className = 'loading';
     this.modal.querySelector('.view-container')?.append(this.iframe);
     this.iframe.setAttribute('src', this.videoListArrayOptions[listIndex].url);
+    this.iframe.onload = () => this.iframe.className = 'loaded';
   } else {
     this.iframe.remove();
+    this.video.className = 'loading';
     this.modal.querySelector('.view-container')?.append(this.video);
     this.videoSrc.setAttribute('src', this.videoListArrayOptions[listIndex].url);
+    this.video.onload = () => this.video.className = 'loaded';
   }
   }
 

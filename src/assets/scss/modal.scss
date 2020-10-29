@@ -65,6 +65,12 @@ button.close {
   -webkit-animation: modalIn 0.2s ease-in;
   animation: modalIn 0.2s ease-in;
 }
+
+iframe.loading, video.loading {
+  background-image: url("https://miro.medium.com/max/882/1*9EBHIOzhE1XfMYoKz1JcsQ.gif");   
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
 @keyframes modalIn {
   0% {
     -webkit-transform: translate(0, -25%);

@@ -60,13 +60,14 @@
 	background-color:#000;
 }
 .videocon {
-	height: 200px;
+	height: 120px;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
 	border-radius: 6px;
 	overflow: hidden;
+	transition: all 0.2s ease-in;
 }
 .videocon::before {
 	position: absolute;
