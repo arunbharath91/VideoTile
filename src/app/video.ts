@@ -97,8 +97,8 @@ export class VideoTile {
           <span class="modal-caption"></span>
           </div>
                 <div class="col-md-6" style="text-align:right">
-                    <button type="button" class="btn btn-primary" id="vi_modal_prev">Previous</button>
-                    <button type="button" class="btn btn-secondary" id="vi_modal_next">Next</button>
+                    <button type="button" class="btn btn-primary btn-sm" id="vi_modal_prev">Previous</button>
+                    <button type="button" class="btn btn-secondary btn-sm" id="vi_modal_next">Next</button>
                     </div>
                     
             </div>

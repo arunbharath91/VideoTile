@@ -55,6 +55,7 @@ button.close {
   left: 0;
   -webkit-overflow-scrolling: touch;
   outline: 0;
+  display: block;
   background: rgba(0,0,0,0.2);
 }
 
@@ -103,10 +104,7 @@ iframe.loading, video.loading {
 .modal-header {
   padding: 15px;
   border-bottom: 1px solid #e5e5e5;
-}
-
-.modal-header .close {
-  margin-top: -2px;
+  align-items: center;
 }
 
 .modal-title {

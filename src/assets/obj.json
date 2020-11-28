@@ -1,4 +1,0 @@
-[
-    {"id": "m7", "value": "{'id': 1, 'name': 'Machine9', 'isActive': 0}", "scope": "GLOBAL"},
-    {"id": "m8", "value": "{'id': 1, 'name': 'Machine9', 'isActive': 0}", "scope": "GLOBAL_GCT"}
-  ]

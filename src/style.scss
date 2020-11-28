@@ -1,5 +1,6 @@
 @import url('assets/scss/video.scss');
 @import url('assets/scss/animate.scss');
+@import url('assets/scss/modal.scss');
 html {
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
@@ -21,11 +22,14 @@ body {
 }
 
 pre {
-    display: block;
-    font-size: 87.5%;
-    color: #212529;
-    background-color: #f7f7f9;
+  display: block;
+  font-size: 87.5%;
+  color: #212529;
+  background-color: #f7f7f9;
+  padding: 10px 20px;
+  margin: 15px;
+  border-radius: 5px;
 }
-
-@import url('assets/scss/bootstrap.scss');
-@import url('assets/scss/modal.scss');
+code {
+  line-height: 26px;
+}
